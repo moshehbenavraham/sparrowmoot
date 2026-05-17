@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">EventSpark social preview</title>
+  <desc id="desc">Event management dashboard preview with EventSpark branding.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#161d2f"/>
+      <stop offset="0.52" stop-color="#293345"/>
+      <stop offset="1" stop-color="#215a58"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7d35d"/>
+      <stop offset="1" stop-color="#58d6b5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 490 C180 395 310 575 500 472 C685 372 800 458 960 358 C1078 285 1134 296 1200 258 L1200 630 L0 630 Z" fill="#f8f3e8" opacity="0.12"/>
+  <g transform="translate(92 88)">
+    <rect x="0" y="0" width="1016" height="454" rx="26" fill="#fffaf0" filter="url(#shadow)"/>
+    <rect x="34" y="34" width="948" height="66" rx="18" fill="#ecf0e8"/>
+    <circle cx="74" cy="67" r="16" fill="#f7d35d"/>
+    <circle cx="121" cy="67" r="16" fill="#58d6b5"/>
+    <circle cx="168" cy="67" r="16" fill="#ef7858"/>
+    <text x="222" y="76" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1c2430">EventSpark</text>
+    <g transform="translate(54 142)">
+      <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#182130">Events that fill the room</text>
+      <text x="0" y="54" font-family="Inter, Arial, sans-serif" font-size="26" fill="#526071">Registration pages, attendee tracking, analytics, and AI-assisted copywriting.</text>
+      <rect x="0" y="104" width="206" height="54" rx="27" fill="url(#accent)"/>
+      <text x="32" y="139" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#15222b">Plan smarter</text>
+    </g>
+    <g transform="translate(660 148)">
+      <rect x="0" y="0" width="280" height="240" rx="24" fill="#182130"/>
+      <rect x="28" y="30" width="224" height="34" rx="17" fill="#58d6b5"/>
+      <rect x="28" y="90" width="224" height="18" rx="9" fill="#fffaf0" opacity="0.85"/>
+      <rect x="28" y="126" width="174" height="18" rx="9" fill="#fffaf0" opacity="0.6"/>
+      <rect x="28" y="176" width="86" height="38" rx="19" fill="#f7d35d"/>
+      <rect x="132" y="176" width="120" height="38" rx="19" fill="#293345"/>
+    </g>
+  </g>
+</svg>

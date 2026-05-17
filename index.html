@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E63E73" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15131F" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>EventSpark — Build events people actually want to attend</title>
+    <meta name="description" content="Event management platform for branded registration pages, attendees, analytics, and AI-assisted copywriting.">
+    <meta name="author" content="EventSpark" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="canonical" href="https://eventspark.app/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EventSpark" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://eventspark.app/" />
+    <meta property="og:title" content="EventSpark — Build events people actually want to attend">
+    <meta property="og:description" content="Event management platform for branded registration pages, attendees, analytics, and AI-assisted copywriting.">
+    <meta property="og:image" content="https://eventspark.app/social-preview.svg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EventSpark — Build events people actually want to attend">
+    <meta name="twitter:description" content="Event management platform for branded registration pages, attendees, analytics, and AI-assisted copywriting.">
+    <meta name="twitter:image" content="https://eventspark.app/social-preview.svg">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://eventspark.app/#website",
+          "url": "https://eventspark.app/",
+          "name": "EventSpark",
+          "description": "Event management platform for branded registration pages, attendees, analytics, and AI-assisted copywriting.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://eventspark.app/#organization",
+          "name": "EventSpark",
+          "url": "https://eventspark.app/",
+          "logo": "https://eventspark.app/social-preview.svg"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://eventspark.app/#app",
+          "name": "EventSpark",
+          "description": "Event management platform for branded registration pages, attendees, analytics, and AI-assisted copywriting.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        }
+      ]
+    }
+    </script>
+
+    <!--
+      Anti-FOUC theme bootstrap. The app uses next-themes with
+      storageKey="app-theme" and defaultTheme="system", and the Settings page
+      lets users pick Light / Dark / System. Without this script the .dark
+      class would flip on *after* React hydrates, producing a one-frame flash.
+      We match next-themes' resolution: explicit stored value wins, otherwise
+      fall back to the OS preference via prefers-color-scheme.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('app-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme;
+          if (stored === 'dark') theme = 'dark';
+          else if (stored === 'light') theme = 'light';
+          else theme = prefersDark ? 'dark' : 'light'; // "system" or unset
+          var root = document.documentElement;
+          root.classList.toggle('dark', theme === 'dark');
+          root.style.colorScheme = theme;
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
